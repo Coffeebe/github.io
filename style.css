@@ -1,0 +1,14 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+ .backgroundwebsite {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/026/466/922/non_2x/cup-of-coffee-espresso-beans-web-banner-with-copy-space-generative-ai-free-photo.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    color:white;
+}
