@@ -55,9 +55,16 @@ body {
 	background-color: white;
 }
 
+.box{
+	border:2px solid black;
+	padding: 20px;
+	margin: 20px;
+
+}
+
 h1 {
 	font-size: 3rem;
-	color: white;
+	color: rgb(255, 255, 255);
 	display: block;
 	text-align: center;
 }
