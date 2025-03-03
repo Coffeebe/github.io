@@ -12,32 +12,34 @@ body{
     background-attachment:fixed;
     color:white;
 }
- 
-.video iframe{
+ .video{
     display: none;
-}
+ }
 
-@media(max-width: 200px){
-    .small{
+
+@media(max-width: 600px){
+    .video-small{
         display: block;
-    }
+   
+}
 }
 
-@media(min-width:201px) and (max-width: 624px) {
-    .medium{ 
+@media(min-width:601px) and (max-width: 1024px) {
+    .video-medium{ 
         display: block; 
     }
 }
 
-@media(min-width: 625px){
-    .large{
-        display: block;
-    }
-}
 
-.box{
-	border:2px solid black;
-	padding: 20px;
-	margin: 20px;
+@media(min-width: 1025px){
+    .video-large{
+        display: block;}
+   
 
 }
+
+ .box{ 
+    border:2px solid black;
+    padding: 20px;
+    margin: 20px;
+ }
