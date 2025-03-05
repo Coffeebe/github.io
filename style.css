@@ -35,7 +35,8 @@ body{
 
 @media(min-width: 1025px){
     .large{
-        display: block;}
+        display: block;
+    }
    
 
 }
