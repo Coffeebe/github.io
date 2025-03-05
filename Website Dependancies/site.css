@@ -155,3 +155,33 @@ footer {
 #incomplete {
 	background-color: red;
 }
+.video{
+    display: none;
+ }
+
+
+@media(max-width: 600px){
+    .small{
+        display: block;
+      align-items: center;
+   }
+ 
+}
+
+@media(min-width:601px) and (max-width: 1024px) {
+    .medium{ 
+        display: block; 
+     align-items: center;
+    }
+   
+}
+
+
+@media(min-width: 1025px){
+    .large{
+        display: block;
+        align-items: center;
+    }
+   
+
+}
