@@ -17,7 +17,7 @@ body{
  }
 
 
-@media(max-width: 600px){
+@media(max-width: 750px){
     .small{
         display: block;
       align-items: center;
@@ -25,7 +25,7 @@ body{
  
 }
 
-@media(min-width:601px) and (max-width: 1024px) {
+@media(min-width:751px) and (max-width: 1024px) {
     .medium{ 
         display: block; 
      align-items: center;
