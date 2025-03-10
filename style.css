@@ -50,11 +50,25 @@ body{
  }
   
 
- .animated{
-    margin: 0;
-    padding:0;
-    background: linear-gradient();
+
+ .animated {
+    background-attachment: fixed;
+    
+    
+    background: linear-gradient(270deg, #e0b262b4, #7c512d, #b49d53);
     background-size: 400% 400%;
     animation:gradient 10s infinite;
-    font-family: ;
+    font-family:'Roboto Slab', serif;
+ }
+
+ @keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
  }
