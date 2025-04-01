@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html lang=en xml:lang=en xmlns='http://www.w3.org/1999/xhtml'>
-<!-- Big Website Ideas-->
+  
 
+<!-- Big Website Ideas-->
 <head>
    <meta charset=utf-8>
    <meta name ="aurthor"content="coffeebe">
@@ -19,23 +20,64 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
      <!-- Note: what does INTEGRITY mean? -->
      <!--- -->
-
+    
    <title>give me a cup coffee</title>
    <link rel="icon" type="image/x-icon" href="Website Dependancies/favicon/icons8-trollface-48.png"> 
    <!--  https://icons8.com/icon/set/kitchen/family-animated--animated, 20250116 -->
    <!-- Favicon is a Pathway and Image File, not from a server. Goes into computer. -->
     <!-- change this favion-->
+  
+     
+ 
+ 
+  <!-- Date Accessed: 2/20/2025-->
 
-</head>
 <!-- -->
 
 <!-- -->
 <body>
+  <audio id="cafe" src="moonlightcoffee.mp3"  loop></audio>
+<!--button id="tea">play</button-->
+<input type="checkbox" id="iced" >
+<label for="iced">on/off music</label>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var audio = document.getElementById("cafe");
+      var button = document.getElementById("tea");
+      var musicswitch = document.getElementById("iced");
+           
+    
+      //button.addEventListener('click', function(){
+        //if (audio.paused) {
+         // audio.play();
+        //  button.textContent = "pause";
+        //} else {
+         // audio.pause();
+         // button.textContent = "play";
+        //}
+      //});
+      let isPlaying = false;
+      musicswitch.addEventListener('change', function(){
+        if (musicswitch.checked) {
+          audio.play();
+       } else {
+        audio.pause();
+        }
+      isPlaying = !isPlaying;
+      });
+
+    });
+  
+</script>
+  
+ 
+
+</head>
+
  <!--id=""style="background-color: blue"-->
   <header class= animated >
 	 <h1 style="font-size:5vw"> welcome to coffeebe:D</h1>
   </header>
-
   <!-- Portfolio Section -->
   <section class="backgroundwebsite">
     <div id="incomplete">
