@@ -1,16 +1,19 @@
-//Global variables
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
+
 //Global variables
+
+//
 Minium minium;
+
 AudioPlayer SoundEffect1;
 AudioPlayer playlist1;
 //
-int appWidth,appHeight;
+int appWidth,appHeight,shorterside;
 //
 int size;
 PFont generalFont;
@@ -33,13 +36,15 @@ void setup() {
   println("Width: "+width+ "\tHeight: "+height+"\t\tDisplay Width: "+displayWidth+"\tDisplay Height: "+displayHeight);
   //NULL: all value are NUll until size(), arithemtic errors
   println("Example Formula: add 1 to the width", width+1 );
-
+//
+musicPlayersetup();
+//
   //
   //Display: CANVAS & Full
-  size(400, 500);//width,height
+  size(400, 500);//width,height //prototyping only
   fullScreen();//displaywidth, displayheigtht
-  appWidth = displayWidth;
-  appHeight = displayHeight;
+  appWidth = width;
+  appHeight = height;
   //landscape is hardcoded
   //println(appwidth, appheight);
   //display geomtry: landscape, portrait, square
@@ -68,10 +73,11 @@ void setup() {
   divs();
   //variable poplationc
   //Images
+  //rect(X,Y,Width,Height)
   String summerMarketPlaceImage= "Summer Knights Market background Image";
   String ExtensionPNG=".png";
   String ExtenionJPG=".Jpg";
-  String pathway= "../Images/';
+  String pathway= "../Images/";
   String landscape_Square="landscape & square Images/";
   String portrait ="Portrait/";
   String backgroundfileName="BackGround Images/";
@@ -139,13 +145,16 @@ void setup() {
 }//End setup
 //
 void draw() {
+  rect (musicplayerGUL(musicMenuX, musicMenuY, musicmenuWidth, musicmenuHeight));
   //display
   //background(backgroundcolour);//hardcoded background colour out, use if to change
   if(lightmode == true ) { //boolean keybind,logical shortcut
   //caution: see setup
+  musicPlayerdraw();
+
   //backgroundImagename=;
   //path pathway+ landscape_square+ backgroundImageName + extenion;
-  bckgroundImage =loadImage( pathlightbackgroundImage);
+  backgroundImage =loadImage( pathlightbackgroundImage);
   }else if ( lightmode == false){
     backgroundImage = loadImage(pathdarkbackgroundImage);
   }else{
@@ -179,6 +188,10 @@ void draw() {
 }//End draw
 //
 void keyPressed() { //Listener
+  
+  
+  musicplayerkeypressed();
+  
   if (key=='Q'||key=='q') 
   {
     soundeffect_1();
