@@ -1,27 +1,28 @@
 //more weird global thingy
 PFont appFont;
 float[]fontSize = new float[textDIVs];
-String[] string = new String[textDivs];
+String[] string = new String[textDIVs];
+
 void textsetupwater() {
-  fontSize= shorterside;
-  appFont=createFont("Arial black", fontSize);
-  for(int i=0; i<textDiVs; i++){
-    fontsize[i] = shorterSide;
+  
+  appFont=createFont("Arial", fontSize);
+  for(int i=0; i<textDIVs; i++){
+    fontSize[i] = shorterSide;
   }
   
   moreWater();
 }//
-void moreWater() {    
+void moreWater() {
   string[0]= "tea bag";
   string[1] = "coffee beans";
-}//
+}//   
 
-//void testsetupbean() {
-  //fontSize= shorterside;
- // la_bean();
-  //la_bean2();
-//}//
-float fontsizeAlgmorithm(float fontSize, int i){
+void testsetupbean() {
+  fontSize= shorterside;
+  la_bean();
+  la_bean2();
+}//
+float fontsize_espresso(float fontSize, int i){
   fontSize = textHeightespresso(fontSize, i);
   fontSize =textWidthespresso(fontSize, i);
   return fontsize;
@@ -37,13 +38,13 @@ float textWidth_yousuck(float fontSize, int i){
   float fontSize_temp=fontSize;
   if (textwidth(string[i])> rectdivWidth[i]) {
     fontSize_temp = fontSize_temp*0.99;
-    textfont(appFont, fontSize_temp);
+    textfont(appFont,fontSize_temp);
   }
   fontSize = fontSize_temp;
+
+ return fontSize;
 }
-;return fontSize;
-}
-void metalpipe(float fontSize String text, float X, float Y, float W, float H) {
+void metalpipe(float fontSize,String text, float X, float Y, float W, float H) {
   metal(fontSize);
   text(text, X, Y, W, H);
   pipe();
