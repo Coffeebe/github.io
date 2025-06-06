@@ -3,7 +3,8 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
-//import java.io.file;
+
+import java.io.file;
 
 int appwidth, shorterside;
 
@@ -62,7 +63,7 @@ void playNextSong() {
   currentSong = (currentSong + 1)% numberofsongs;
   playlist[currentSong].close();
 }
- float comparisonreturnSmaller(float a,float b) {
+ float comparisonreturnSamller(float a,float b) {
    return a < b ? a:b;
  }
   
