@@ -62,7 +62,7 @@ void setup() {
  if(gameOver) return;
  
  int row=mouseY / cellSize;
- int col=mouseX / cellsize;
+ int col=mouseX / cellSize;
  int index = row * gridSize +col;
  
 if(index < board.length && board[index] == ' '){
@@ -82,32 +82,39 @@ if(index < board.length && board[index] == ' '){
    }
   }
  }  
-     
  boolean checkWinner() {
-for (int i = 0; i < gridSize; i++) {
-  if (board[i * gridSize] == currentPlayer && 
-  board[i * gridSize + 1] == currentPlayer && 
-  board[i * gridSize + 2]== currentPlayer){
+  // Check rows
+  for (int i = 0; i < gridSize; i++) {
+    if (board[i * gridSize] == currentPlayer && 
+        board[i * gridSize + 1] == currentPlayer && 
+        board[i * gridSize + 2] == currentPlayer) {
+      return true;
+    }
+  }
+
+  // Check columns
+  for (int i = 0; i < gridSize; i++) {
+    if (board[i] == currentPlayer && 
+      board[i + gridSize] == currentPlayer && 
+        board[i + 2 * gridSize] == currentPlayer) {
+      return true;
+    }
+  }
+  if (board[0] == currentPlayer && 
+      board[4] == currentPlayer && 
+      board[8] == currentPlayer) {
     return true;
   }
-if (board[i] == currentPlayer && 
-board [i + gridSize] == currentPlayer && 
-board[i + 2 * gridSize] == currentPlayer) {
-  return true;
-}
-if (board[0] == currentPlayer &&
-board[4] == currentPlayer && 
-board[8] == currentPlayer) {
-    return true; 
+  if (board[2] == currentPlayer && 
+      board[4] == currentPlayer && 
+      board[6] == currentPlayer) {
+    return true;
   }
-if (board[2] == currentPlayer && 
-board [4] == currentPlayer && 
-board[6] == currentPlayer){
- return true; 
- }
- return false;
+
+  return false;
 }
- boolean isBoardFull(){
+
+ boolean isboardFull(){
     for(int i = 0; i< board.length; i++){
         if(board[i] == ' ') {
         return false;
